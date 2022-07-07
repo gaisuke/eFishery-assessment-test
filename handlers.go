@@ -88,8 +88,8 @@ func UpdatePinjaman(w http.ResponseWriter, r *http.Request)  {
 	existPinjaman.TenorPinjaman = pinjaman.TenorPinjaman
 	existPinjaman.StatusPinjaman = pinjaman.StatusPinjaman
 	existPinjaman.DokumenPinjaman = pinjaman.DokumenPinjaman
-	existPinjaman.TglDibuat = CurrentTime
-	existPinjaman.TglDiupdate = CurrentTime
+	existPinjaman.TglDibuat = string(CurrentTime.Format("2017-09-07 17:06:06"))
+	existPinjaman.TglDiupdate = string(CurrentTime.Format("2017-09-07 17:06:06"))
 
 	if err := db.Save(&existPinjaman).Error; err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)

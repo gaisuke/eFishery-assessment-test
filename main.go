@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"time"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -18,8 +17,8 @@ type Pinjaman struct {
 	TenorPinjaman int `json:"tenorPinjaman"`
 	StatusPinjaman string `json:"statusPinjaman"`
 	DokumenPinjaman bool `json:"dokumenPinjaman"`
-	TglDibuat time.Time `json:"tglDibuat" `
-	TglDiupdate time.Time `json:"tglDiupdate" `
+	TglDibuat string `json:"tglDibuat" `
+	TglDiupdate string `json:"tglDiupdate" `
 }
 
 type key int 
