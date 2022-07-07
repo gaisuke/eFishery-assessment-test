@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"net/http"
 	"strconv"
-	"time"
 
 	"gorm.io/gorm"
 )
@@ -80,16 +79,12 @@ func UpdatePinjaman(w http.ResponseWriter, r *http.Request)  {
 		return
 	}
 
-	CurrentTime := time.Now()
-
 	existPinjaman.IDPeminjam = pinjaman.IDPeminjam
 	existPinjaman.PinjamanPokok = pinjaman.PinjamanPokok
 	existPinjaman.SukuBunga = pinjaman.SukuBunga
 	existPinjaman.TenorPinjaman = pinjaman.TenorPinjaman
 	existPinjaman.StatusPinjaman = pinjaman.StatusPinjaman
 	existPinjaman.DokumenPinjaman = pinjaman.DokumenPinjaman
-	existPinjaman.TglDibuat = string(CurrentTime.Format("2017-09-07 17:06:06"))
-	existPinjaman.TglDiupdate = string(CurrentTime.Format("2017-09-07 17:06:06"))
 
 	if err := db.Save(&existPinjaman).Error; err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
