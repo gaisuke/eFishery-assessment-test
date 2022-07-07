@@ -1,0 +1,10 @@
+Saya mendesain fitur ini dengan pendekatan 1 tabel user, dengan pembagian "roles" ada petani, ada admin. Maka fiturnya meliputi :
+
+1. Petani bisa mengajukan pengajuan pinjaman (Create)
+2. Petani bisa melihat pengajuan pinjaman (Read)
+3. Petani bisa mengubah pengajuan pinjaman (Update)
+4. Petani bisa menghapus pengajuan pinjaman (Delete)
+5. Admin bisa liat peminjam (getAll)
+6. Admin bisa liat pinjaman (getAll)
+7. Admin bisa liat detail peminjam (getByID)
+8. Admin bisa liat detail pinjaman (getByID)
