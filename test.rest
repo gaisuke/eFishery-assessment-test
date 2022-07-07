@@ -1,0 +1,14 @@
+### Test server
+GET http://localhost:4000 HTTP/1.1
+
+### GET all pinjaman
+GET http://localhost:4000/pinjaman HTTP/1.1
+
+### POST create pinjaman
+POST http://localhost:4000/pinjaman/create HTTP/1.1
+
+### PUT update pinjaman
+PUT http://localhost:4000/pinjaman/update HTTP/1.1
+
+### DELETE pinjaman
+PUT http://localhost:4000/pinjaman/delete HTTP/1.1
